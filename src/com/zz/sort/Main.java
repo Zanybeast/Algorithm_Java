@@ -16,20 +16,22 @@ import java.util.Arrays;
 @SuppressWarnings({"rawtypes", "unchecked"})
 public class Main {
     public static void main(String[] args) {
-        Integer[] array = Integers.random(10000, 1, 20000);
+        Integer[] array = Integers.random(50000, 1, 100000);
 //        Integer[] array = Integers.tailAscOrder(1,20000, 4000);
 //        Integer[] array = Integers.ascOrder(1, 20000);
 
         testSort(array,
 //                new BubbleSort1(),
 //                new BubbleSort2(),
-                new BubbleSort3(),
-                new SelectionSort(),
+//                new BubbleSort3(),
+//                new SelectionSort(),
                 new HeapSort(),
 //                new InsertionSort1(),
-                new InsertionSort2(),
+//                new InsertionSort2(),
                 new InsertionSort3(),
-                new MergeSort());
+                new MergeSort(),
+                new QuickSort(),
+                new ShellSort());
     }
 
     public static void testSort(Integer[] array, Sort... sorts) {
