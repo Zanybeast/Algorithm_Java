@@ -1,7 +1,5 @@
 package com.zz.sort.types;
 
-import com.zz.sort.Sort;
-
 /**
  * @ClassName BubbleSort3
  * @Description TODO
@@ -9,7 +7,7 @@ import com.zz.sort.Sort;
  * @Date 2020/11/14 11:35
  * @Version 1.0
  **/
-public class BubbleSort3 extends Sort {
+public class BubbleSort3<E extends Comparable<E>> extends Sort<E> {
     @Override
     protected void sort() {
         for (int end = array.length - 1; end > 0; end--) {

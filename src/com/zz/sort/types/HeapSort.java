@@ -1,7 +1,5 @@
 package com.zz.sort.types;
 
-import com.zz.sort.Sort;
-
 /**
  * @ClassName HeapSort
  * @Description TODO
@@ -9,7 +7,7 @@ import com.zz.sort.Sort;
  * @Date 2020/11/14 11:52
  * @Version 1.0
  **/
-public class HeapSort extends Sort {
+public class HeapSort<E extends Comparable<E>> extends Sort<E> {
     private int heapSize;
     @Override
     protected void sort() {
@@ -31,23 +29,23 @@ public class HeapSort extends Sort {
     }
 
     private void siftDown(int index) {
-        Integer element = array[index];
+        E element = array[index];
 
         int half = heapSize >> 1;
         while (index < half) { // index必须是非叶子节点
             // 默认是左边跟父节点比
             int childIndex = (index << 1) + 1;
-            Integer child = array[childIndex];
+            E child = array[childIndex];
 
             int rightIndex = childIndex + 1;
             // 右子节点比左子节点大
             if (rightIndex < heapSize &&
-                    cmpElement(array[rightIndex], child) > 0) {
+                    cmp(array[rightIndex], child) > 0) {
                 child = array[childIndex = rightIndex];
             }
 
             // 大于等于子节点
-            if (cmpElement(element, child) >= 0) break;
+            if (cmp(element, child) >= 0) break;
 
             array[index] = child;
             index = childIndex;

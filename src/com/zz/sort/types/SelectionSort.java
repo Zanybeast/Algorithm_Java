@@ -1,7 +1,5 @@
 package com.zz.sort.types;
 
-import com.zz.sort.Sort;
-
 /**
  * @ClassName SelectionSort
  * @Description TODO
@@ -9,13 +7,13 @@ import com.zz.sort.Sort;
  * @Date 2020/11/14 11:43
  * @Version 1.0
  **/
-public class SelectionSort extends Sort {
+public class SelectionSort<E extends Comparable<E>> extends Sort<E> {
     @Override
     protected void sort() {
         for (int end = array.length - 1; end > 0; end--) {
             int maxIndex = 0;
             for (int begin = 1; begin <= end; begin++) {
-                if (cmp(begin, maxIndex) > 0) {
+                if (cmp(maxIndex, begin) < 0) {
                     maxIndex = begin;
                 }
             }
