@@ -1,6 +1,10 @@
 package com.zz.sort.types;
 
 import com.zz.sort.classes.Student;
+import com.zz.sort.types.baseCmp.SelectionSort;
+import com.zz.sort.types.baseCmp.ShellSort;
+import com.zz.sort.types.others.CountingSort;
+import com.zz.sort.types.others.RadixSort;
 
 import java.text.DecimalFormat;
 
@@ -89,6 +93,11 @@ public abstract class Sort<E extends Comparable<E>> implements Comparable<Sort<E
     }
 
     private boolean isStable() {
+
+        if (this instanceof RadixSort) return true;
+        if (this instanceof CountingSort) return true;
+        if (this instanceof ShellSort) return false;
+        if (this instanceof SelectionSort) return false;
         Student[] students = new Student[20];
 
         for (int i = 0; i < students.length; i++) {

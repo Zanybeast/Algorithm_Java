@@ -1,4 +1,6 @@
-package com.zz.sort.types;
+package com.zz.sort.types.baseCmp;
+
+import com.zz.sort.types.Sort;
 
 import java.util.LinkedList;
 import java.util.List;

@@ -7,6 +7,8 @@ package com.zz.tools;
  * @Date 2020/11/14 11:01
  * @Version 1.0
  **/
+import com.zz.sort.types.Sort;
+
 import java.util.Arrays;
 
 public class Integers {
