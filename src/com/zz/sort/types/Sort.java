@@ -1,6 +1,6 @@
 package com.zz.sort.types;
 
-import com.zz.sort.classes.Student;
+import com.zz.classes.Student;
 import com.zz.sort.types.baseCmp.SelectionSort;
 import com.zz.sort.types.baseCmp.ShellSort;
 import com.zz.sort.types.others.CountingSort;

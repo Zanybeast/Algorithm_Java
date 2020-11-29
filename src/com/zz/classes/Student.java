@@ -1,4 +1,4 @@
-package com.zz.sort.classes;
+package com.zz.classes;
 
 /**
  * @ClassName Student
@@ -10,10 +10,26 @@ package com.zz.sort.classes;
 public class Student implements Comparable<Student> {
     private int scroe;
     private int age;
+    private int id;
+
+    public Student(int scroe, int age, int id) {
+        this.scroe = scroe;
+        this.age = age;
+        this.id = id;
+    }
 
     public Student(int scroe, int age) {
         this.scroe = scroe;
         this.age = age;
+        this.id = 1;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setScroe(int scroe) {
